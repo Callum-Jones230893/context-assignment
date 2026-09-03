@@ -13,20 +13,19 @@ const AlignmentSelection = () => {
     alignment ? setAlignment([...alignment, colour]) : setAlignment([colour])
   }
   // adjust to allow only one instance of each colour so it cannot be ["red", "red"] etc
-
-
+  
   const handlePledge = () => {
     setUser({ ...user!, alignment: alignment! })
   }
 
   return (
     <div className="flex flex-col gap-15 items-center">
-      <div className="flex gap-15">
+      <div className="flex flex-col md:flex-row pt-10 md:pt-0 gap-20">
       {colours.map((colour, index) => (
         <div
           key={index}
           onClick={() => handleAlignment(colour.name)}
-          className="cursor-pointer"
+          className="cursor-pointer w-50 h-auto hover:scale-110"
         >
           <img src={colour.image} alt={colour.name} />
         </div>

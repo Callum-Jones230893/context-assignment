@@ -31,22 +31,22 @@ export const users: UsersType[] = [
 export const colours: ColourType[] = [
   {
     name: "white",
-    image: ""
+    image: "/images/white.png"
   },
   {
     name: "red",
-    image: ""
+    image: "/images/red.png"
   },
   {
     name: "black",
-    image: ""
+    image: "/images/black.png"
   },
   {
     name: "blue",
-    image: ""
+    image: "/images/blue.png"
   },
   {
     name: "green",
-    image: ""
+    image: "/images/green.png"
   }
 ]

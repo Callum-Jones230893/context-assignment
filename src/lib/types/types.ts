@@ -6,7 +6,7 @@ export type UserContextType = {
 export type UsersType = {
   username: string
   password: string
-  alignment: string[]
+  alignment: string
   favouriteCardColour: string[]
   savedDecks: CardType[]
 }

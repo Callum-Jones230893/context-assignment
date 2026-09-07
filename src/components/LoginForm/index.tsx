@@ -2,7 +2,7 @@
 
 import { SetStateAction, useState } from "react"
 import { users } from "@/lib/data/data"
-import { useUserContext } from "@/lib/context/UserContext"
+import { useUserContext } from "@/context/UserContext"
 import { UserContextType } from "@/lib/types/types"
 import { redirect } from 'next/navigation'
 
@@ -29,7 +29,6 @@ const LoginForm = () => {
       (item) => item.username === username && item.password === password,
     )
     loggedInUser && setUser(loggedInUser)
-
     loggedInUser && redirect("/")
   }
 

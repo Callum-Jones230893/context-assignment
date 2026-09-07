@@ -1,17 +1,21 @@
 "use client"
 
-import { useUserContext } from "@/lib/context/UserContext"
+import ProfileInfoCard from "@/components/ProfileInfoCard"
+import { useUserContext } from "@/context/UserContext"
 import { UserContextType } from "@/lib/types/types"
 
 const ProfilePage = () => {
   const { user } = useUserContext() as UserContextType
 
   return (
-    <div>
+    <>
       {user &&
-        <h2>Welcome {user.username}</h2>
+        <div className="flex flex-col items-center justify-center gap-10">
+          <h2 className="text-2xl md:text-4xl">Welcome {user.username}</h2>
+          <ProfileInfoCard />
+        </div>
       }
-    </div>
+    </>
   )
 }
 

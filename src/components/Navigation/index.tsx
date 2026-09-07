@@ -1,6 +1,6 @@
 "use client"
 
-import { useUserContext } from "@/lib/context/UserContext"
+import { useUserContext } from "@/context/UserContext"
 import { UserContextType } from "@/lib/types/types"
 import Link from "next/link"
 

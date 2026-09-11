@@ -9,7 +9,7 @@ const PublicLanding = ({ randomCard }: PublicLandingProps) => {
   return (
     <>
       {randomCard && 
-        <CardDisplay randomCard={randomCard} />
+        <CardDisplay card={randomCard} landing={true} />
       }
     </>
   )

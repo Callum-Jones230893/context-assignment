@@ -17,22 +17,39 @@ const SuggestedSection = () => {
           `${process.env.NEXT_PUBLIC_API_ENDPOINT}/cards/search?q=${encodeURIComponent(query)}`,
         )
         const data = await response.json()
-        setAlignedSearch(data)
+        setAlignedSearch(data.data)
       } catch (error) {
         console.log(error)
       }
     }
-
     fetchAlignmentColours()
   }, [user?.alignment])
 
+  const filteredSearch = alignedSearch?.filter((colour) =>
+    user?.alignment.every(
+      (c) =>
+        colour.color_identity.includes(c) &&
+        user.alignment.length === colour.color_identity.length,
+    ),
+  )
+
   return (
-    <div>
-      {user?.alignment &&
-        alignedSearch?.map((card) => {
-          return <CardDisplay alignedCards={card} />
-        })}
-    </div>
+    <>
+      {user?.alignment && alignedSearch && (
+        <h2 className="pb-15 text-3xl md:text-4xl">
+          {user.favouriteCardColour}
+        </h2>
+      )}
+      <div className="flex flex-col lg:grid grid-cols-2 2xl:grid-cols-3 w-[75%] gap-10 lg:gap-20 xl:gap-40">
+        {user?.alignment &&
+          filteredSearch &&
+          filteredSearch.map((card) => (
+            <div key={card.id} className="flex items-center justify-center">
+              <CardDisplay card={card} landing={false} />
+            </div>
+          ))}
+      </div>
+    </>
   )
 }
 

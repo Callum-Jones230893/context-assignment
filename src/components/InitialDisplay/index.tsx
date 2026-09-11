@@ -18,7 +18,7 @@ const InitialDisplay = () => {
     }
   }, [])
 
-  const selectedColours = `${user?.favouriteCardColour.filter((colour) => colour)}`
+  const selectedColours = `${user?.alignment.filter((colour) => colour)}`
 
   const fetchRandomCard = async () => {
     try {

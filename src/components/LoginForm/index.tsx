@@ -9,8 +9,6 @@ import { redirect } from 'next/navigation'
 const LoginForm = () => {
   const { user, setUser } = useUserContext() as UserContextType
 
-  console.log(user)
-
   const [username, setUsername] = useState<string>("")
   const [password, setPassword] = useState<string>("")
 

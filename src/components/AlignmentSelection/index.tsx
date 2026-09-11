@@ -9,35 +9,29 @@ const AlignmentSelection = () => {
   const { user, setUser } = useUserContext() as UserContextType
   const [alignment, setAlignment] = useState<ColourType[] | null>(null)
 
-  // const handleSelectedColour = (selectedColour: ColourType) => {
-  //   if (selectedColour.selected === false) {
-  //     [{...selectedColour, selected: true}]
-  //   } else {
-  //     [{...selectedColour, selected: false}]
-  //   }
-  // }
-
   const handleAlignment = (colour: ColourType) => {
-    if (alignment) {
+    if (user && alignment) {
       setAlignment([...alignment, colour])
-      alignment.includes(colour) &&
-        setAlignment(alignment.filter((c) => c.name !== colour.name))
+
+      alignment.includes(colour) && 
+      setAlignment(alignment.filter((c) => c.name !== colour.name))
+
     } else {
       setAlignment([colour])
     }
   }
-
+  
   const alignmentColours = combinationNames.filter((item) =>
     alignment?.every(
       (colour) =>
-        item.colours.includes(colour.name) &&
-        item.colours.length === alignment?.length,
+      item.colours.includes(colour.name) &&
+      item.colours.length === alignment?.length,
     ),
   )
 
   const handlePledge = () => {
     if (user && alignment) {
-      setUser({ ...user, alignment: alignmentColours[0].name })
+      setUser({ ...user, alignment: alignmentColours[0].code!, favouriteCardColour: alignmentColours[0].name })
     }
   }
 
@@ -58,7 +52,7 @@ const AlignmentSelection = () => {
             <div
               key={index}
               onClick={() => handleAlignment(colour)}
-              className="cursor-pointer w-50 h-auto hover:scale-110"
+              className="cursor-pointer w-50 h-auto hover:scale-120 ease-in-out duration-200"
             >
               <img src={colour.image} alt={colour.name} />
             </div>

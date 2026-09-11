@@ -6,7 +6,7 @@ const ProfileInfoCard = () => {
   return (
     <div className="flex flex-col gap-5 text-[18px] md:text-xl">
       <p>Username : {user?.username}</p>
-      <p>Pledged alignment : {user?.alignment}</p>
+      <p>Pledged alignment : {user?.favouriteCardColour}</p>
       <p>Number of stashed cards : </p>
       <p>You have {user?.savedDecks.length} saved decks.</p>
     </div>

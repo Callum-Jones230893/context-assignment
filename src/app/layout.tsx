@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import { UserContextProvider } from "@/context/UserContext";
-import LoginWrapper from "@/components/LoginWrapper"
+import Image from "next/image";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,10 +27,17 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <div className="fixed inset-0 -z-10 pointer-events-none">
+          <Image
+            src="/images/backgroundimg.jpg"
+            alt="Background"
+            fill
+            priority
+          />
+        </div>
         <UserContextProvider>
           <Header />
           {children}
-          {/* <LoginWrapper children={children} /> */}
         </UserContextProvider>
       </body>
     </html>

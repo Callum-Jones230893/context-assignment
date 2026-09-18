@@ -11,7 +11,7 @@ const ProfilePage = () => {
     <>
       {user &&
         <div className="flex flex-col items-center justify-center gap-10">
-          <h2 className="text-2xl md:text-4xl">Welcome {user.username}</h2>
+          <h2 className="text-3xl md:text-[42px]">Welcome {user.username}</h2>
           <ProfileInfoCard />
         </div>
       }

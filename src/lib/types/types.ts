@@ -1,6 +1,6 @@
 export type UserContextType = {
   user: UsersType | null
-  setUser: (user: UsersType) => void
+  setUser: (user: UsersType | null) => void
 }
 
 export type UsersType = {
@@ -9,7 +9,6 @@ export type UsersType = {
   alignment: string[]
   favouriteCardColour: string
   favouriteCards: CardType[]
-  savedDecks: CardType[]
 }
 
 export type CardType = {
@@ -26,23 +25,23 @@ export type CardType = {
   color_identity: string[]
 }
 
-// export type FullRecipeType = CardType & {
-//   strCategory: string
-//   strArea: string
-//   strCountry: string
-//   strInstructions: string
-//   strTags: string
-//   ingredients: string[]
-// }
-
 export type ColourType = {
   name: string
   code: string[]
   image: string
 }
 
+export type AlignmentContextType = {
+  alignment: ColourType[] | null
+  setAlignment: (alignment: ColourType[] | null) => void
+}
+
 export type CombinationNamesType = {
   name: string
   code: string[]
   colours: string[]
+}
+
+export type NavCardTypes = {
+  name: string
 }

@@ -1,4 +1,4 @@
-import { ColourType, UsersType } from "../types/types";
+import { ColourType, CombinationNamesType, NavCardTypes, UsersType } from "../types/types";
 
 export const users: UsersType[] = [
   { 
@@ -7,7 +7,13 @@ export const users: UsersType[] = [
     alignment: [],
     favouriteCardColour: "White",
     favouriteCards: [],
-    savedDecks: []
+  },
+  { 
+    username: "billy", 
+    password: "password",
+    alignment: [],
+    favouriteCardColour: "Red",
+    favouriteCards: [],
   },
 ]
 
@@ -39,8 +45,8 @@ export const colours: ColourType[] = [
   }
 ]
 
-// add a type
-export const combinationNames = [
+
+export const combinationNames: CombinationNamesType[] = [
   {
     name: "White",
     code: ["W"],
@@ -196,4 +202,28 @@ export const combinationNames = [
     code: ["W", "U", "B", "G", "R"],
     colours: ["white", "blue", "black", "green", "red"]
   }
+]
+
+export const cardTypes: NavCardTypes[] = [
+  {
+    name: "Artifact"
+  },
+  {
+    name: "Creature"
+  },
+  {
+    name: "Enchantment"
+  },
+  {
+    name: "Instant"
+  },
+  {
+    name: "Land"
+  },
+  {
+    name: "Planeswalker"
+  },
+  {
+    name: "Sorcery"
+  },
 ]

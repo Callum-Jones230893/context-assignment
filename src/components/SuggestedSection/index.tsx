@@ -9,7 +9,8 @@ const SuggestedSection = () => {
   const query = `color:${user?.alignment}`
 
   useEffect(() => {
-    if (!user?.alignment) return
+    if (!user?.alignment) 
+      return
 
     const fetchAlignmentColours = async () => {
       try {
@@ -36,11 +37,11 @@ const SuggestedSection = () => {
   return (
     <>
       {user?.alignment && alignedSearch && (
-        <h2 className="pb-15 text-3xl md:text-4xl">
+        <h2 className="pb-15 text-[42px] font-(family-name:--font-planeswalker) text-custom-shadow">
           {user.favouriteCardColour}
         </h2>
       )}
-      <div className="flex flex-col lg:grid grid-cols-2 2xl:grid-cols-3 w-[75%] gap-10 lg:gap-20 xl:gap-40">
+      <div className="flex flex-col lg:grid grid-cols-2 2xl:grid-cols-3 gap-10 lg:gap-20 xl:gap-40">
         {user?.alignment &&
           filteredSearch &&
           filteredSearch.map((card) => (

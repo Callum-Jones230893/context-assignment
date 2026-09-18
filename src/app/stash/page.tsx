@@ -3,9 +3,15 @@
 import CardDisplay from "@/components/CardDisplay"
 import { useUserContext } from "@/context/UserContext"
 import { UserContextType } from "@/lib/types/types"
+import { redirect } from "next/navigation"
 
 const StashPage = () => {
   const { user } = useUserContext() as UserContextType
+
+  if (!user) {
+    redirect("/")
+  }
+
   return (
     <div className="flex flex-col">
       {user && (

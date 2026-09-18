@@ -37,7 +37,7 @@ const CardDisplay = ({ card, landing }: CardDisplayProps) => {
           </div>
           <div className="w-[90%] h-auto flex-1">
             {card.image_uris?.normal 
-              ? <img className="w-full h-150 aspect-63/88 object-contain rounded-lg" src={card.image_uris?.normal} alt={card.name} loading="lazy" />
+              ? <img className="w-full aspect-63/88 object-contain rounded-lg" src={card.image_uris?.normal} alt={card.name} loading="lazy" />
               : <img className="w-full h-150 aspect-63/88 object-contain rounded-lg" src="/images/cardback.webp" alt={card.name} loading="lazy" />
             }
           </div>

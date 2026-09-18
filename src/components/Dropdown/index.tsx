@@ -48,7 +48,7 @@ const Dropdown = () => {
           ref={menuRef}
           className="flex flex-col text-right absolute right-0 z-99"
         >
-          <div onClick={handleClick} className="pb-16">
+          <div onClick={handleClick} className="pb-10 md:pb-16">
             {!menuOpen && (
               <GiMagicGate className="absolute right-2 size-8 my-1" />
             )}
@@ -57,7 +57,7 @@ const Dropdown = () => {
             )}
           </div>
           <ul
-            className={`${menuOpen ? "flex flex-col mt-2" : "hidden"} gap-3 bg-black/50 rounded-2xl backdrop-blur-2xl w-40 h-auto pb-5 mr-1 pr-2`}
+            className={`${menuOpen ? "flex flex-col mt-2" : "hidden"} gap-3 bg-black/50 rounded-2xl backdrop-blur-2xl w-40 h-auto pb-5 right-0 mr-1 pr-2`}
           >
             <li className="max-h-100 overflow-y-auto scrollbar-none">
               <div

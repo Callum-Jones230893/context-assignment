@@ -56,7 +56,7 @@ const AlignmentSelection = () => {
         )}
       </div>
       <div className="flex flex-col gap-15 items-center justify-evenly grow">
-        <div className="grid grid-cols-3 min-w-80 lg:flex-row md:pt-0 gap-10 md:gap-20">
+        <div className="grid grid-cols-3 min-w-80 lg:flex-row md:pt-0 gap-10 md:gap-20 px-2">
           {colours.map((colour, index) => (
             <div
               key={index}

@@ -11,11 +11,7 @@ const InitialDisplay = () => {
   const [displayedCard, setDisplayedCard] = useState<CardType | null>(null)
 
   useEffect(() => {
-    if (user?.favouriteCardColour) {
-      fetchFavouriteColour()
-    } else {
-      fetchRandomCard()
-    }
+    fetchRandomCard()
   }, [])
 
   const selectedColours = `${user?.alignment.filter((colour) => colour)}`
@@ -29,17 +25,6 @@ const InitialDisplay = () => {
 
       data && setDisplayedCard(data)
       
-    } catch (error) {
-      console.log(error)
-    }
-  }
-
-  const fetchFavouriteColour = async () => {
-    try {
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_ENDPOINT}cards/search?q=c%3A${selectedColours}`,
-      )
-      const data = await response.json()
     } catch (error) {
       console.log(error)
     }

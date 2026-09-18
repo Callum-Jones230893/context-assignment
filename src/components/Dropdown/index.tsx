@@ -41,8 +41,6 @@ const Dropdown = () => {
     setMenuOpen(false)
   })
 
-  console.log(user)
-
   return (
     <>
       {user && (

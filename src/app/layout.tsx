@@ -20,7 +20,7 @@ const planeswalker = localFont({
       style: "normal"
     }
   ],
-  variable: '--font-planeswalker'
+  variable: '--font-planeswalker',
 })
 
 

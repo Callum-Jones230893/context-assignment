@@ -5,12 +5,7 @@ import { redirect } from "next/navigation"
 
 const CardPage = async ({ params }: { params: { id: string } }) => {
   const { id } = await params
-  const { user } = useUserContext() as UserContextType
   let card: CardType | null = null
-
-  if (!user) {
-    redirect("/")
-  }
 
   try {
     const response = await fetch(

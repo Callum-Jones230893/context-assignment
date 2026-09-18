@@ -19,27 +19,27 @@ export const users: UsersType[] = [
 
 export const colours: ColourType[] = [
   {
-    name: "white",
+    name: "White",
     code: ["W"],
     image: "/images/white.png",
   },
   {
-    name: "red",
+    name: "Red",
     code: ["R"],
     image: "/images/red.png",
   },
   {
-    name: "black",
+    name: "Black",
     code: ["B"],
     image: "/images/black.png",
   },
   {
-    name: "blue",
+    name: "Blue",
     code: ["U"],
     image: "/images/blue.png",
   },
   {
-    name: "green",
+    name: "Green",
     code: ["G"],
     image: "/images/green.png",
   }
@@ -50,157 +50,157 @@ export const combinationNames: CombinationNamesType[] = [
   {
     name: "White",
     code: ["W"],
-    colours: ["white"]
+    colours: ["White"]
   },
   {
     name: "Black",
     code: ["B"],
-    colours: ["black"]
+    colours: ["Black"]
   },
   {
     name: "Red",
     code: ["R"],
-    colours: ["red"]
+    colours: ["Red"]
   },
   {
     name: "Green",
     code: ["G"],
-    colours: ["green"]
+    colours: ["Green"]
   },
   {
     name: "Blue",
     code: ["U"],
-    colours: ["blue"]
+    colours: ["Blue"]
   },
   {
     name: "Azorius",
     code: ["W", "U"],
-    colours: ["white", "blue"]
+    colours: ["White", "Blue"]
   },
   {
     name: "Orzhov",
     code: ["W", "B"],
-    colours: ["white", "black"]
+    colours: ["White", "Black"]
   },
   {
     name: "Boros",
     code: ["W", "R"],
-    colours: ["white", "red"]
+    colours: ["White", "Red"]
   },
   {
     name: "Selesnya",
     code: ["W", "G"],
-    colours: ["white", "green"]
+    colours: ["White", "Green"]
   },
   {
     name: "Dimir",
     code: ["U", "B"],
-    colours: ["blue", "black"]
+    colours: ["Blue", "Black"]
   },
   {
     name: "Izzet",
     code: ["U", "R"],
-    colours: ["blue", "red"]
+    colours: ["Blue", "Red"]
   },
   {
     name: "Simic",
     code: ["U", "G"],
-    colours: ["blue", "green"]
+    colours: ["Blue", "Green"]
   },
   {
     name: "Rakdos",
     code: ["B", "R"],
-    colours: ["black", "red"]
+    colours: ["Black", "Red"]
   },
   {
     name: "Gruul",
     code: ["G", "R"],
-    colours: ["green", "red"]
+    colours: ["Green", "Red"]
   },
   {
     name: "Golgari",
     code: ["B", "G"],
-    colours: ["black", "green"]
+    colours: ["Black", "Green"]
   },
   {
     name: "Bant",
     code: ["U", "G", "W"],
-    colours: ["blue", "green", "white"]
+    colours: ["Blue", "Green", "White"]
   },
   {
     name: "Esper",
     code: ["W", "B", "U"],
-    colours: ["white", "black", "blue"]
+    colours: ["White", "Black", "Blue"]
   },
   {
     name: "Grixis",
     code: ["B", "U", "R"],
-    colours: ["black", "blue", "red"]
+    colours: ["Wlack", "Blue", "Red"]
   },
   {
     name: "Jund",
     code: ["B", "G", "R"],
-    colours: ["black", "green", "red"]
+    colours: ["Black", "Green", "Red"]
   },
   {
     name: "Naya",
     code: ["G", "R", "W"],
-    colours: ["green", "red", "white"]
+    colours: ["Green", "Red", "White"]
   },
   {
     name: "Abzan",
     code: ["B", "G", "W"],
-    colours: ["black", "green", "white"]
+    colours: ["Black", "Green", "White"]
   },
   {
     name: "Jeskai",
     code: ["W", "B", "U"],
-    colours: ["blue", "red", "white"]
+    colours: ["Blue", "Red", "White"]
   },
   {
     name: "Mardu",
     code: ["B", "R", "W"],
-    colours: ["black", "red", "white"]
+    colours: ["Black", "Red", "White"]
   },
   {
     name: "Sultai",
     code: ["B", "G", "U"],
-    colours: ["black", "green", "blue"]
+    colours: ["Black", "Green", "Blue"]
   },
   {
     name: "Temur",
     code: ["U", "G", "R"],
-    colours: ["blue", "green", "red"]
+    colours: ["Blue", "Green", "Red"]
   },
   {
     name: "Dune",
     code: ["B", "R", "W", "G"],
-    colours: ["black", "red", "white", "green"]
+    colours: ["Black", "Red", "White", "Green"]
   },
   {
     name: "Glint",
     code: ["U", "R", "B", "G"],
-    colours: ["blue", "red", "black", "green"]
+    colours: ["Blue", "Red", "Black", "Green"]
   },
   {
     name: "Ink",
     code: ["U", "R", "W", "G"],
-    colours: ["blue", "red", "white", "green"]
+    colours: ["Blue", "Red", "White", "Green"]
   },
   {
     name: "Witch",
     code: ["W", "G", "U", "B"],
-    colours: ["white", "green", "blue", "black"]
+    colours: ["White", "Green", "Blue", "Black"]
   },
   {
     name: "Temur",
     code: ["U", "W", "R", "B"],
-    colours: ["blue", "white", "red", "black"]
+    colours: ["Blue", "White", "Red", "Black"]
   },
   {
     name: "Wubrg",
     code: ["W", "U", "B", "G", "R"],
-    colours: ["white", "blue", "black", "green", "red"]
+    colours: ["White", "Blue", "Black", "Green", "Red"]
   }
 ]
 

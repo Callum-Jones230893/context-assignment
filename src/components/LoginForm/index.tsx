@@ -45,7 +45,7 @@ const LoginForm = () => {
   }
 
   return (
-    <section className="flex flex-col justify-center border w-8/10 md:w-6/10 lg:w-1/3 h-150 items-center gap-12 rounded-sm bg-black/50">
+    <section className="flex flex-col justify-center border w-9/10 md:w-6/10 lg:w-1/3 h-150 items-center gap-12 rounded-sm bg-black/50">
       <h2 className="py-8 text-[32px]">Login</h2>
       <form className="flex flex-col gap-10 text-[24px]">
         <div className="flex flex-col gap-2">

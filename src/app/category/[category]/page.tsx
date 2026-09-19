@@ -17,7 +17,7 @@ const CategoryPage = ({ params }: CategoryPageType) => {
   const query = `t:${category.toLowerCase()}`
 
   if (!user) {
-    redirect('/')
+    redirect('/login')
   }
 
   useEffect(() => {

@@ -18,7 +18,7 @@ const ColourPage = ({ params }: ColourPageType) => {
   const query = `color:${colour}`
 
   if (!user) {
-    redirect("/")
+    redirect("/login")
   }
 
   useEffect(() => {

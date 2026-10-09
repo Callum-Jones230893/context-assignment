@@ -36,23 +36,16 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${planeswalker.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-(family-name:--font-planeswalker) text-custom-shadow">
-        <div className="fixed inset-0 -z-10 pointer-events-none">
-          <Image
-            src="/images/backgroundimgb.jpg"
-            alt="Background"
-            fill
-            priority
-          />
-        </div>
-        <UserContextProvider>
-          <AlignmentContextProvider>
-            <Header />
-            <div className="flex flex-col flex-1">
-              {children}
-            </div>
-            <Footer />
-          </AlignmentContextProvider>
-        </UserContextProvider>
+        <div className="fixed inset-0 -z-10 pointer-events-none bg-[url(/images/backgroundimgb.jpg)] bg-cover bg-center"></div>
+          <UserContextProvider>
+            <AlignmentContextProvider>
+              <Header />
+              <div className="flex flex-col flex-1">
+                {children}
+              </div>
+              <Footer />
+            </AlignmentContextProvider>
+          </UserContextProvider>
       </body>
     </html>
   )
